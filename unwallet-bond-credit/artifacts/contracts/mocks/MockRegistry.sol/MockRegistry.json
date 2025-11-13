@@ -1,0 +1,171 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockRegistry",
+  "sourceName": "contracts/mocks/MockRegistry.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "Log",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "NewTrustedAttesters",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "attesters",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "threshold",
+          "type": "uint256"
+        }
+      ],
+      "name": "check",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "moduleType",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "attesters",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "threshold",
+          "type": "uint256"
+        }
+      ],
+      "name": "check",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "moduleType",
+          "type": "uint256"
+        }
+      ],
+      "name": "check",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "check",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "smartAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "checkForAccount",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "smartAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "moduleType",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkForAccount",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "address[]",
+          "name": "attesters",
+          "type": "address[]"
+        }
+      ],
+      "name": "trustAttesters",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60808060405234601557610288908161001a8239f35b5f80fdfe6080806040526004361015610012575f80fd5b5f3560e01c80630bb30abc146101a15780632ed94467146101675780634c13560c1461014e578063529562a11461012c57806396fb721714610113578063c23697a8146100f85763f05c04e114610067575f80fd5b346100f45760403660031901126100f45760043560ff8116036100f45760243567ffffffffffffffff81116100f4577fb8a00d6d8ca1be30bfec34d8f97e55f0f0fd9eeb7fb46e030516363d4cfe1ad6916100c86020923690600401610221565b5050338152a17fb6d9a72244037f5f1de04d8ff74cd328f1574efc59a02163d0fec055487197465f80a1005b5f80fd5b346100f45760203660031901126100f4576101116101db565b005b346100f45760403660031901126100f4576101116101db565b346100f45760603660031901126100f4576101456101db565b506101116101fe565b346100f45760403660031901126100f4576101456101db565b346100f45760803660031901126100f4576101806101db565b5060443567ffffffffffffffff81116100f457610111903690600401610221565b346100f45760603660031901126100f4576101ba6101db565b5060243567ffffffffffffffff81116100f457610111903690600401610221565b6004359073ffffffffffffffffffffffffffffffffffffffff821682036100f457565b6024359073ffffffffffffffffffffffffffffffffffffffff821682036100f457565b9181601f840112156100f45782359167ffffffffffffffff83116100f4576020808501948460051b0101116100f45756fea264697066735822122028b07be86741bf05258af91c13c0940fb543d27c42803c4e0b160150ce6d053d64736f6c634300081b0033",
+  "deployedBytecode": "0x6080806040526004361015610012575f80fd5b5f3560e01c80630bb30abc146101a15780632ed94467146101675780634c13560c1461014e578063529562a11461012c57806396fb721714610113578063c23697a8146100f85763f05c04e114610067575f80fd5b346100f45760403660031901126100f45760043560ff8116036100f45760243567ffffffffffffffff81116100f4577fb8a00d6d8ca1be30bfec34d8f97e55f0f0fd9eeb7fb46e030516363d4cfe1ad6916100c86020923690600401610221565b5050338152a17fb6d9a72244037f5f1de04d8ff74cd328f1574efc59a02163d0fec055487197465f80a1005b5f80fd5b346100f45760203660031901126100f4576101116101db565b005b346100f45760403660031901126100f4576101116101db565b346100f45760603660031901126100f4576101456101db565b506101116101fe565b346100f45760403660031901126100f4576101456101db565b346100f45760803660031901126100f4576101806101db565b5060443567ffffffffffffffff81116100f457610111903690600401610221565b346100f45760603660031901126100f4576101ba6101db565b5060243567ffffffffffffffff81116100f457610111903690600401610221565b6004359073ffffffffffffffffffffffffffffffffffffffff821682036100f457565b6024359073ffffffffffffffffffffffffffffffffffffffff821682036100f457565b9181601f840112156100f45782359167ffffffffffffffff83116100f4576020808501948460051b0101116100f45756fea264697066735822122028b07be86741bf05258af91c13c0940fb543d27c42803c4e0b160150ce6d053d64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

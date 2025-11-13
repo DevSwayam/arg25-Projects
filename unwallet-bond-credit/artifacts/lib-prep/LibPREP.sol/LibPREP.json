@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "LibPREP",
+  "sourceName": "lib-prep/LibPREP.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220a560b737c8edecbe0e7bdc6cb49de5b72a2f6e6eb48a53a714a3ea1ad1add06a64736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220a560b737c8edecbe0e7bdc6cb49de5b72a2f6e6eb48a53a714a3ea1ad1add06a64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

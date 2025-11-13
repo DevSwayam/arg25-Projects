@@ -1,0 +1,102 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IExecutionHelper",
+  "sourceName": "contracts/interfaces/base/IExecutionHelper.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "ExecType",
+          "name": "execType",
+          "type": "bytes1"
+        }
+      ],
+      "name": "UnsupportedExecType",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "callData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "result",
+          "type": "bytes"
+        }
+      ],
+      "name": "TryDelegateCallUnsuccessful",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "callData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "result",
+          "type": "bytes"
+        }
+      ],
+      "name": "TryExecuteUnsuccessful",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ExecutionMode",
+          "name": "mode",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "executionCalldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "execute",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ExecutionMode",
+          "name": "mode",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "executionCalldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "executeFromExecutor",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "returnData",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

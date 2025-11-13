@@ -1,0 +1,135 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Storage",
+  "sourceName": "composability/Storage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "SlotNotInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "getNamespace",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "namespace",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "slot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getNamespacedSlot",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "namespace",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "slot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isSlotInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "namespace",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "slot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "readStorage",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "slot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "value",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "writeStorage",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346015576102c1908161001a8239f35b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c80632824be8b146101ab578063882694b4146101455780638ffcaed51461011a578063a39e0787146100b35763b65ad19714610050575f80fd5b346100af57610067610061366101ba565b9061021f565b805f525f60205260ff60405f205416156100875760209054604051908152f35b7f1993adfd000000000000000000000000000000000000000000000000000000005f5260045ffd5b5f80fd5b346100af5760603660031901126100af5760443573ffffffffffffffffffffffffffffffffffffffff811681036100af576100fb906100f6600435913390610245565b61021f565b5f818152602081905260409020805460ff191660011790556024359055005b346100af5761012b610061366101ba565b5f525f602052602060ff60405f2054166040519015158152f35b346100af5760403660031901126100af5760043573ffffffffffffffffffffffffffffffffffffffff811681036100af576024359073ffffffffffffffffffffffffffffffffffffffff821682036100af576020916101a391610245565b604051908152f35b346100af5760206101a3610061365b60409060031901126100af576004359060243590565b90601f8019910116810190811067ffffffffffffffff8211176101f257604052565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b90604051906020820192835260408201526040815261023f6060826101d0565b51902090565b906040519060208201926bffffffffffffffffffffffff199060601b1683526bffffffffffffffffffffffff199060601b1660348201526028815261023f6048826101d056fea2646970667358221220942ed6ff4167f031af6212d2be0b90d46a52f4a36add8698912e6c67abc3649264736f6c634300081b0033",
+  "deployedBytecode": "0x60806040526004361015610011575f80fd5b5f3560e01c80632824be8b146101ab578063882694b4146101455780638ffcaed51461011a578063a39e0787146100b35763b65ad19714610050575f80fd5b346100af57610067610061366101ba565b9061021f565b805f525f60205260ff60405f205416156100875760209054604051908152f35b7f1993adfd000000000000000000000000000000000000000000000000000000005f5260045ffd5b5f80fd5b346100af5760603660031901126100af5760443573ffffffffffffffffffffffffffffffffffffffff811681036100af576100fb906100f6600435913390610245565b61021f565b5f818152602081905260409020805460ff191660011790556024359055005b346100af5761012b610061366101ba565b5f525f602052602060ff60405f2054166040519015158152f35b346100af5760403660031901126100af5760043573ffffffffffffffffffffffffffffffffffffffff811681036100af576024359073ffffffffffffffffffffffffffffffffffffffff821682036100af576020916101a391610245565b604051908152f35b346100af5760206101a3610061365b60409060031901126100af576004359060243590565b90601f8019910116810190811067ffffffffffffffff8211176101f257604052565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b90604051906020820192835260408201526040815261023f6060826101d0565b51902090565b906040519060208201926bffffffffffffffffffffffff199060601b1683526bffffffffffffffffffffffff199060601b1660348201526028815261023f6048826101d056fea2646970667358221220942ed6ff4167f031af6212d2be0b90d46a52f4a36add8698912e6c67abc3649264736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

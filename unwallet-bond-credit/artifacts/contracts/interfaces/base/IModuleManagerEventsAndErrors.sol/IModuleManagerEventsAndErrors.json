@@ -1,0 +1,256 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IModuleManagerEventsAndErrors",
+  "sourceName": "contracts/interfaces/base/IModuleManagerEventsAndErrors.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CanNotRemoveLastValidator",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "DefaultValidatorAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EmergencyUninstallSigError",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EnableModeSigError",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FallbackAlreadyInstalledForSelector",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FallbackCallTypeInvalid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FallbackHandlerUninstallFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FallbackNotInstalledForSelector",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FallbackSelectorForbidden",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "currentHook",
+          "type": "address"
+        }
+      ],
+      "name": "HookAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "HookPostCheckFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidInput",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "InvalidModule",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "InvalidModuleTypeId",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidNonce",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MismatchModuleTypeId",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "MissingFallbackHandler",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ModuleAddressCanNotBeZero",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ModuleAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ModuleNotInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoValidatorInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "currentPreValidationHook",
+          "type": "address"
+        }
+      ],
+      "name": "PrevalidationHookAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "UnauthorizedOperation",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "CallType",
+          "name": "callType",
+          "type": "bytes1"
+        }
+      ],
+      "name": "UnsupportedCallType",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ValidatorNotInstalled",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ModuleInstalled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ModuleUninstalled",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,95 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "INexusEventsAndErrors",
+  "sourceName": "contracts/interfaces/INexusEventsAndErrors.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AccountAlreadyInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AccountNotInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC7702AccountCannotBeUpgradedThisWay",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EmergencyTimeLockNotExpired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EntryPointCanNotBeZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ExecutionFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ImplementationIsNotAContract",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InnerCallFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidImplementationAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidInitData",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidPREP",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NexusInitializationFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "UnsupportedModuleType",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        }
+      ],
+      "name": "PREPInitialized",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

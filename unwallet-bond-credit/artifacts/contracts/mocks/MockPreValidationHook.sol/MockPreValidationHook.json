@@ -1,0 +1,209 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockPreValidationHook",
+  "sourceName": "contracts/mocks/MockPreValidationHook.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "dataFirstWord",
+          "type": "bytes32"
+        }
+      ],
+      "name": "HookOnInstallCalled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "PreCheckCalled",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isModuleType",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onInstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "onUninstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "preValidationHookERC1271",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "hookHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "hookSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nonce",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "initCode",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "accountGasLimits",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "preVerificationGas",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "gasFees",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "paymasterAndData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct PackedUserOperation",
+          "name": "userOp",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "userOpHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "preValidationHookERC4337",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "hookHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "hookSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460155761037f908161001a8239f35b5f80fdfe6080806040526004361015610012575f80fd5b5f3560e01c9081636d61fe70146101d3575080637a0468b71461017d5780638a91b0e31461014a578063d60b347f14610125578063e24f8f931461009a5763ecd059611461005e575f80fd5b346100965760203660031901126100965760206004356009811490811561008b575b506040519015158152f35b60089150145f610080565b5f80fd5b346100965760603660031901126100965760043567ffffffffffffffff81116100965780360390610120600319830112610096576101048101359160221901821215610096570160048101359067ffffffffffffffff82116100965760240190803603821361009657610121916101129136916102c4565b60405191829160443583610292565b0390f35b346100965760203660031901126100965761013e61026f565b50602060405160018152f35b346100965760203660031901126100965760043567ffffffffffffffff81116100965761017b903690600401610241565b005b346100965760603660031901126100965761019661026f565b5060443567ffffffffffffffff8111610096576101c46101bd610121923690600401610241565b36916102c4565b60405191829160243583610292565b346100965760203660031901126100965760043567ffffffffffffffff811161009657610204903690600401610241565b602081101561020f57005b602011610096577f14e90641f423866d7177454e587228d86b9edce2f3a3323e7b2c70598df176b191602091358152a1005b9181601f840112156100965782359167ffffffffffffffff8311610096576020838186019501011161009657565b6004359073ffffffffffffffffffffffffffffffffffffffff8216820361009657565b9060609260209183526040828401528051918291826040860152018484015e5f828201840152601f01601f1916010190565b92919267ffffffffffffffff821161031c5760405191601f8101601f19908116603f0116830167ffffffffffffffff81118482101761031c57604052829481845281830111610096578281602093845f960137010152565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffdfea2646970667358221220f7a1dc1ce490c905caba9d1a06f98429b0f9d9202c107987d296692599398d8364736f6c634300081b0033",
+  "deployedBytecode": "0x6080806040526004361015610012575f80fd5b5f3560e01c9081636d61fe70146101d3575080637a0468b71461017d5780638a91b0e31461014a578063d60b347f14610125578063e24f8f931461009a5763ecd059611461005e575f80fd5b346100965760203660031901126100965760206004356009811490811561008b575b506040519015158152f35b60089150145f610080565b5f80fd5b346100965760603660031901126100965760043567ffffffffffffffff81116100965780360390610120600319830112610096576101048101359160221901821215610096570160048101359067ffffffffffffffff82116100965760240190803603821361009657610121916101129136916102c4565b60405191829160443583610292565b0390f35b346100965760203660031901126100965761013e61026f565b50602060405160018152f35b346100965760203660031901126100965760043567ffffffffffffffff81116100965761017b903690600401610241565b005b346100965760603660031901126100965761019661026f565b5060443567ffffffffffffffff8111610096576101c46101bd610121923690600401610241565b36916102c4565b60405191829160243583610292565b346100965760203660031901126100965760043567ffffffffffffffff811161009657610204903690600401610241565b602081101561020f57005b602011610096577f14e90641f423866d7177454e587228d86b9edce2f3a3323e7b2c70598df176b191602091358152a1005b9181601f840112156100965782359167ffffffffffffffff8311610096576020838186019501011161009657565b6004359073ffffffffffffffffffffffffffffffffffffffff8216820361009657565b9060609260209183526040828401528051918291826040860152018484015e5f828201840152601f01601f1916010190565b92919267ffffffffffffffff821161031c5760405191601f8101601f19908116603f0116830167ffffffffffffffff81118482101761031c57604052829481845281830111610096578281602093845f960137010152565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffdfea2646970667358221220f7a1dc1ce490c905caba9d1a06f98429b0f9d9202c107987d296692599398d8364736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

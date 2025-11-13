@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ProxyLib",
+  "sourceName": "contracts/lib/ProxyLib.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "EthTransferFailed",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea26469706673582212203197092cf1eebfe7df522664adf62cf044a85a9dacb3273f324fb918c621474364736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea26469706673582212203197092cf1eebfe7df522664adf62cf044a85a9dacb3273f324fb918c621474364736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

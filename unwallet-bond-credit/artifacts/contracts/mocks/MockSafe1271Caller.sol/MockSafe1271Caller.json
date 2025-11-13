@@ -1,0 +1,165 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockSafe1271Caller",
+  "sourceName": "contracts/mocks/MockSafe1271Caller.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "smartAccount",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "smartAccount",
+          "type": "address"
+        }
+      ],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isModuleType",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onInstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onUninstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nonce",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "initCode",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "accountGasLimits",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "preVerificationGas",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "gasFees",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "paymasterAndData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct PackedUserOperation",
+          "name": "userOp",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "userOpHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "validateUserOp",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460155761049f908161001a8239f35b5f80fdfe6080806040526004361015610012575f80fd5b5f3560e01c9081636d61fe701461038c57816370a0823114610348575080638a91b0e31461034357806397003203146100bd578063d60b347f146100825763ecd059611461005e575f80fd5b3461007e57602036600319011261007e5760206040516001600435148152f35b5f80fd5b3461007e57602036600319011261007e5760043573ffffffffffffffffffffffffffffffffffffffff81160361007e57602060405160018152f35b3461007e57604036600319011261007e5760043567ffffffffffffffff811161007e5780360361012060031982011261007e5781600401359173ffffffffffffffffffffffffffffffffffffffff831680930361007e57610104810135916022190182121561007e5701600481013567ffffffffffffffff811161007e576024820190803603821361007e5782016024810191906060908490031261007e573567ffffffffffffffff811161007e57816020600461017e9386010101610413565b604483013567ffffffffffffffff811161007e5782602060046101a49387010101610413565b9060648401359067ffffffffffffffff821161007e5760209485946064936101cf9201602401610413565b50838151910120604051848101918783524660408301526060820152606081526101fa6080826103dd565b5190206040519485938492630b135d3f60e11b84526004840152604060248401528051918291826044860152018484015e5f828201840152601f01601f19168101030181855afa908115610338575f916102bd575b507fffffffff0000000000000000000000000000000000000000000000000000000016630b135d3f60e11b1461028a575b60206040515f8152f35b5f525f60205260405f2080545f1981146102a957600101905580610280565b634e487b7160e01b5f52601160045260245ffd5b90506020813d602011610330575b816102d8602093836103dd565b8101031261007e57517fffffffff000000000000000000000000000000000000000000000000000000008116810361007e577fffffffff0000000000000000000000000000000000000000000000000000000061024f565b3d91506102cb565b6040513d5f823e3d90fd5b61038c565b3461007e57602036600319011261007e576004359073ffffffffffffffffffffffffffffffffffffffff821680920361007e576020915f525f825260405f20548152f35b3461007e57602036600319011261007e5760043567ffffffffffffffff811161007e573660238201121561007e5780600401359067ffffffffffffffff821161007e57366024838301011161007e57005b90601f8019910116810190811067ffffffffffffffff8211176103ff57604052565b634e487b7160e01b5f52604160045260245ffd5b81601f8201121561007e5780359067ffffffffffffffff82116103ff5760405192610448601f8401601f1916602001856103dd565b8284526020838301011161007e57815f92602080930183860137830101529056fea2646970667358221220a222040db2ceeb609c2ef30234a5d83456449d5e228474de6de12882085fcdac64736f6c634300081b0033",
+  "deployedBytecode": "0x6080806040526004361015610012575f80fd5b5f3560e01c9081636d61fe701461038c57816370a0823114610348575080638a91b0e31461034357806397003203146100bd578063d60b347f146100825763ecd059611461005e575f80fd5b3461007e57602036600319011261007e5760206040516001600435148152f35b5f80fd5b3461007e57602036600319011261007e5760043573ffffffffffffffffffffffffffffffffffffffff81160361007e57602060405160018152f35b3461007e57604036600319011261007e5760043567ffffffffffffffff811161007e5780360361012060031982011261007e5781600401359173ffffffffffffffffffffffffffffffffffffffff831680930361007e57610104810135916022190182121561007e5701600481013567ffffffffffffffff811161007e576024820190803603821361007e5782016024810191906060908490031261007e573567ffffffffffffffff811161007e57816020600461017e9386010101610413565b604483013567ffffffffffffffff811161007e5782602060046101a49387010101610413565b9060648401359067ffffffffffffffff821161007e5760209485946064936101cf9201602401610413565b50838151910120604051848101918783524660408301526060820152606081526101fa6080826103dd565b5190206040519485938492630b135d3f60e11b84526004840152604060248401528051918291826044860152018484015e5f828201840152601f01601f19168101030181855afa908115610338575f916102bd575b507fffffffff0000000000000000000000000000000000000000000000000000000016630b135d3f60e11b1461028a575b60206040515f8152f35b5f525f60205260405f2080545f1981146102a957600101905580610280565b634e487b7160e01b5f52601160045260245ffd5b90506020813d602011610330575b816102d8602093836103dd565b8101031261007e57517fffffffff000000000000000000000000000000000000000000000000000000008116810361007e577fffffffff0000000000000000000000000000000000000000000000000000000061024f565b3d91506102cb565b6040513d5f823e3d90fd5b61038c565b3461007e57602036600319011261007e576004359073ffffffffffffffffffffffffffffffffffffffff821680920361007e576020915f525f825260405f20548152f35b3461007e57602036600319011261007e5760043567ffffffffffffffff811161007e573660238201121561007e5780600401359067ffffffffffffffff821161007e57366024838301011161007e57005b90601f8019910116810190811067ffffffffffffffff8211176103ff57604052565b634e487b7160e01b5f52604160045260245ffd5b81601f8201121561007e5780359067ffffffffffffffff82116103ff5760405192610448601f8401601f1916602001856103dd565b8284526020838301011161007e57815f92602080930183860137830101529056fea2646970667358221220a222040db2ceeb609c2ef30234a5d83456449d5e228474de6de12882085fcdac64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

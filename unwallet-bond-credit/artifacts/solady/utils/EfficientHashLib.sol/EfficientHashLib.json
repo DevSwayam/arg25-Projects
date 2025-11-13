@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EfficientHashLib",
+  "sourceName": "solady/utils/EfficientHashLib.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220f7e2d04343af992087837c5c12fef86ff0e43f9f78420f82814fc0db13bcd94064736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220f7e2d04343af992087837c5c12fef86ff0e43f9f78420f82814fc0db13bcd94064736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

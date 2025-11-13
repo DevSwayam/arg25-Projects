@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "LibBytes",
+  "sourceName": "solady/utils/LibBytes.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea264697066735822122007094ff003cd748add53cba66ee2e2464e895b0698a5fbb0404561d9eba0f5e464736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea264697066735822122007094ff003cd748add53cba66ee2e2464e895b0698a5fbb0404561d9eba0f5e464736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

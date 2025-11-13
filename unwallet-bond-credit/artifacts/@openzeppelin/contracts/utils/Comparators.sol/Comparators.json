@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Comparators",
+  "sourceName": "@openzeppelin/contracts/utils/Comparators.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220cc1ab0a3b8a5af5e4d2eff51e8c37a64919a6074f1e9170343d59d9f64db5f5664736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220cc1ab0a3b8a5af5e4d2eff51e8c37a64919a6074f1e9170343d59d9f64db5f5664736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

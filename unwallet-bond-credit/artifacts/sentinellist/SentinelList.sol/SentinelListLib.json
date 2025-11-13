@@ -1,0 +1,43 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "SentinelListLib",
+  "sourceName": "sentinellist/SentinelList.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "LinkedList_AlreadyInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "entry",
+          "type": "address"
+        }
+      ],
+      "name": "LinkedList_EntryAlreadyInList",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "entry",
+          "type": "address"
+        }
+      ],
+      "name": "LinkedList_InvalidEntry",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "LinkedList_InvalidPage",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220d52a2e6c53a6efe09f461a28d26bf6591a5d0badb7699ef92de62bffe2f623ec64736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220d52a2e6c53a6efe09f461a28d26bf6591a5d0badb7699ef92de62bffe2f623ec64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

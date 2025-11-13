@@ -1,0 +1,16 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "CallContextChecker",
+  "sourceName": "solady/utils/CallContextChecker.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "UnauthorizedCallContext",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x60a08060405234601d57306080526039908160228239608051815050f35b5f80fdfe5f80fdfea2646970667358221220ef9dddb4d4a7ea46664ebae60843948047777dd33726a4b10b3b9f6ee72f8ff664736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220ef9dddb4d4a7ea46664ebae60843948047777dd33726a4b10b3b9f6ee72f8ff664736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

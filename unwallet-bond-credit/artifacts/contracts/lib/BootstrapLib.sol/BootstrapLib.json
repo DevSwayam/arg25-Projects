@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BootstrapLib",
+  "sourceName": "contracts/lib/BootstrapLib.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220a15d46bbad64f227fe13bafc9a1246a94983d40b278a54e74b2253577211e62d64736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220a15d46bbad64f227fe13bafc9a1246a94983d40b278a54e74b2253577211e62d64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

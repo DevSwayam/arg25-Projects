@@ -1,0 +1,188 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EmittingHook",
+  "sourceName": "contracts/mocks/EmittingHook.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "dataFirstWord",
+          "type": "bytes32"
+        }
+      ],
+      "name": "HookOnInstallCalled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "PostCheckCalled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "PreCheckExtractedSelector",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "PreCheckMsgData",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "PreCheckSender",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "PreCheckValue",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isModuleType",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onInstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "onUninstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "hookData",
+          "type": "bytes"
+        }
+      ],
+      "name": "postCheck",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "preCheck",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346015576103b4908161001a8239f35b5f80fdfe6080806040526004361015610012575f80fd5b5f3560e01c908163173bf7da146102665781636d61fe70146102bf575080638a91b0e314610266578063d60b347f14610242578063d68f6025146100815763ecd059611461005e575f80fd5b3461007d57602036600319011261007d57602060405160048035148152f35b5f80fd5b3461007d57606036600319011261007d5761009a61035b565b60443567ffffffffffffffff811161007d576100ba90369060040161032d565b90918160041161007d577f5915bfd68e38465c5c5725614a4d258cb14adfad196122aeb73cff2d4b7b288f60209260407fcdb8d6144e642b16a21037a8952d02412a7236e319b0f104fd29faf8027c4f18957fea24e0f0a7dd8f6ca79288bbb9a034e6aea62e49d3096de7ff8a9143a960244d8683517fffffffff000000000000000000000000000000000000000000000000000000008435168152a18282519384928884528189850152848401375f828201840152601f01601f19168101030190a173ffffffffffffffffffffffffffffffffffffffff60405191168152a17fe046e4c91deb7182e5e748de3adc5bf09e98c03027bfd0e3acd636212474e3dc60206040516024358152a1604051602081019080821067ffffffffffffffff831117610215576040908282525f81528151928391602083525180918160208501528484015e5f828201840152601f01601f19168101030190f35b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b3461007d57602036600319011261007d5761025b61035b565b5060206040515f8152f35b3461007d57602036600319011261007d5760043567ffffffffffffffff811161007d5761029790369060040161032d565b50507f4fe6b98bcb5f3f4e11f2cb49cfe134ffdd4a18546f6a3bdc15d6503645e144ac5f80a1005b3461007d57602036600319011261007d5760043567ffffffffffffffff811161007d576102f090369060040161032d565b60208110156102fb57005b60201161007d577f14e90641f423866d7177454e587228d86b9edce2f3a3323e7b2c70598df176b191602091358152a1005b9181601f8401121561007d5782359167ffffffffffffffff831161007d576020838186019501011161007d57565b6004359073ffffffffffffffffffffffffffffffffffffffff8216820361007d5756fea26469706673582212207d5d153830195b5a9ba386fb223267bdf1e330536c8c04d5c1d4154db393772c64736f6c634300081b0033",
+  "deployedBytecode": "0x6080806040526004361015610012575f80fd5b5f3560e01c908163173bf7da146102665781636d61fe70146102bf575080638a91b0e314610266578063d60b347f14610242578063d68f6025146100815763ecd059611461005e575f80fd5b3461007d57602036600319011261007d57602060405160048035148152f35b5f80fd5b3461007d57606036600319011261007d5761009a61035b565b60443567ffffffffffffffff811161007d576100ba90369060040161032d565b90918160041161007d577f5915bfd68e38465c5c5725614a4d258cb14adfad196122aeb73cff2d4b7b288f60209260407fcdb8d6144e642b16a21037a8952d02412a7236e319b0f104fd29faf8027c4f18957fea24e0f0a7dd8f6ca79288bbb9a034e6aea62e49d3096de7ff8a9143a960244d8683517fffffffff000000000000000000000000000000000000000000000000000000008435168152a18282519384928884528189850152848401375f828201840152601f01601f19168101030190a173ffffffffffffffffffffffffffffffffffffffff60405191168152a17fe046e4c91deb7182e5e748de3adc5bf09e98c03027bfd0e3acd636212474e3dc60206040516024358152a1604051602081019080821067ffffffffffffffff831117610215576040908282525f81528151928391602083525180918160208501528484015e5f828201840152601f01601f19168101030190f35b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b3461007d57602036600319011261007d5761025b61035b565b5060206040515f8152f35b3461007d57602036600319011261007d5760043567ffffffffffffffff811161007d5761029790369060040161032d565b50507f4fe6b98bcb5f3f4e11f2cb49cfe134ffdd4a18546f6a3bdc15d6503645e144ac5f80a1005b3461007d57602036600319011261007d5760043567ffffffffffffffff811161007d576102f090369060040161032d565b60208110156102fb57005b60201161007d577f14e90641f423866d7177454e587228d86b9edce2f3a3323e7b2c70598df176b191602091358152a1005b9181601f8401121561007d5782359167ffffffffffffffff831161007d576020838186019501011161007d57565b6004359073ffffffffffffffffffffffffffffffffffffffff8216820361007d5756fea26469706673582212207d5d153830195b5a9ba386fb223267bdf1e330536c8c04d5c1d4154db393772c64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

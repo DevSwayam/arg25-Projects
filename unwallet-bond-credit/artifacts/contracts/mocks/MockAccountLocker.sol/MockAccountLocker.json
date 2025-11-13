@@ -1,0 +1,164 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockAccountLocker",
+  "sourceName": "contracts/mocks/MockAccountLocker.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "getLockedAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "smartAccount",
+          "type": "address"
+        }
+      ],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "moduleTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isModuleType",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onInstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onUninstall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "hookData",
+          "type": "bytes"
+        }
+      ],
+      "name": "postCheck",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "msgSender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "msgValue",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "msgData",
+          "type": "bytes"
+        }
+      ],
+      "name": "preCheck",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "hookData",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "setLockedAmount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460155761028d908161001a8239f35b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c8063173bf7da146101c55780636d61fe70146101c55780638a91b0e3146101c5578063998aa66a14610175578063a7d8916814610123578063d60b347f146100ff578063d68f6025146100945763ecd0596114610071575f80fd5b3461009057602036600319011261009057602060405160048035148152f35b5f80fd5b34610090576060366003190112610090576100ad61022b565b5060443567ffffffffffffffff8111610090576100ce9036906004016101ca565b5050604051602081526040816060518060208301528060808484015e5f828201840152601f01601f19168101030190f35b346100905760203660031901126100905761011861022b565b5060206040515f8152f35b346100905760403660031901126100905761013c61022b565b6001600160a01b0361014c610241565b165f525f6020526001600160a01b0360405f2091165f52602052602060405f2054604051908152f35b346100905760603660031901126100905761018e61022b565b6001600160a01b0361019e610241565b165f525f6020526001600160a01b0360405f2091165f5260205260405f2060443590555f80f35b6101f8565b9181601f840112156100905782359167ffffffffffffffff8311610090576020838186019501011161009057565b346100905760203660031901126100905760043567ffffffffffffffff8111610090576102299036906004016101ca565b005b600435906001600160a01b038216820361009057565b602435906001600160a01b03821682036100905756fea2646970667358221220e3c95e454d2db86aadd5ef681c10d95217269b1f68ad06e4e6d9089c6167b96d64736f6c634300081b0033",
+  "deployedBytecode": "0x60806040526004361015610011575f80fd5b5f3560e01c8063173bf7da146101c55780636d61fe70146101c55780638a91b0e3146101c5578063998aa66a14610175578063a7d8916814610123578063d60b347f146100ff578063d68f6025146100945763ecd0596114610071575f80fd5b3461009057602036600319011261009057602060405160048035148152f35b5f80fd5b34610090576060366003190112610090576100ad61022b565b5060443567ffffffffffffffff8111610090576100ce9036906004016101ca565b5050604051602081526040816060518060208301528060808484015e5f828201840152601f01601f19168101030190f35b346100905760203660031901126100905761011861022b565b5060206040515f8152f35b346100905760403660031901126100905761013c61022b565b6001600160a01b0361014c610241565b165f525f6020526001600160a01b0360405f2091165f52602052602060405f2054604051908152f35b346100905760603660031901126100905761018e61022b565b6001600160a01b0361019e610241565b165f525f6020526001600160a01b0360405f2091165f5260205260405f2060443590555f80f35b6101f8565b9181601f840112156100905782359167ffffffffffffffff8311610090576020838186019501011161009057565b346100905760203660031901126100905760043567ffffffffffffffff8111610090576102299036906004016101ca565b005b600435906001600160a01b038216820361009057565b602435906001600160a01b03821682036100905756fea2646970667358221220e3c95e454d2db86aadd5ef681c10d95217269b1f68ad06e4e6d9089c6167b96d64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

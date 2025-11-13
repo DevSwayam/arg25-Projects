@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ExcessivelySafeCall",
+  "sourceName": "excessively-safe-call/ExcessivelySafeCall.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea26469706673582212204ea1f030f3943ac570779481f8fbc8ef27fde4d6ef51aa198e0d28cedbd15cdf64736f6c634300081b0033",
+  "deployedBytecode": "0x5f80fdfea26469706673582212204ea1f030f3943ac570779481f8fbc8ef27fde4d6ef51aa198e0d28cedbd15cdf64736f6c634300081b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
