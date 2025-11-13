@@ -1,0 +1,29 @@
+{
+  "name": "unwallet-bond-credit",
+  "version": "1.0.0",
+  "description": "BondModule deployment script for UnWallet",
+  "main": "index.ts",
+  "scripts": {
+    "deploy": "hardhat run index.ts --network baseSepolia",
+    "compile": "hardhat compile",
+    "test": "hardhat test"
+  },
+  "keywords": [
+    "hardhat",
+    "ethereum",
+    "smart-contracts",
+    "bond-module"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^20.10.0",
+    "hardhat": "^2.19.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0"
+  }
+}
+

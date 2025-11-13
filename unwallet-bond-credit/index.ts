@@ -2,6 +2,9 @@ import { ethers } from "hardhat";
 import { Wallet, keccak256, solidityPackedKeccak256, getBytes, toUtf8Bytes, ZeroAddress } from "ethers";
 import * as fs from "fs";
 import * as path from "path";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 /**
  * BondModule Deployment Demo Script
@@ -13,7 +16,7 @@ import * as path from "path";
  * 3. Execute atomic deployment + distribution via Multicall3
  *
  * Network: Base Sepolia
- * Run: PRIVATE_KEY=your_key npx hardhat run scripts/hardhat/deployBondModule.ts --network baseSepolia
+ * Run: PRIVATE_KEY=your_key npx hardhat run index.ts --network baseSepolia
  */
 
 // Deployed contract addresses from Foundry deployment
@@ -313,8 +316,13 @@ async function deployAccountAndExecuteDistribution(
 async function updateDeploymentsJson(nexusAccountAddress: string) {
   console.log("\n[Step 6] Updating deployments.json...");
 
-  const deploymentsPath = path.join(__dirname, "../../deployments.json");
-  const deployments = JSON.parse(fs.readFileSync(deploymentsPath, "utf8"));
+  const deploymentsPath = path.join(__dirname, "deployments.json");
+  
+  // Create deployments.json if it doesn't exist
+  let deployments: any = {};
+  if (fs.existsSync(deploymentsPath)) {
+    deployments = JSON.parse(fs.readFileSync(deploymentsPath, "utf8"));
+  }
 
   // Update bondModule deployment info
   if (!deployments.networks) {
