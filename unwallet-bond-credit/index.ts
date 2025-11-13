@@ -3,6 +3,7 @@ import { Wallet, keccak256, solidityPackedKeccak256, getBytes, toUtf8Bytes, Zero
 import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
+import hre from "hardhat";
 
 dotenv.config();
 
@@ -62,18 +63,20 @@ async function main() {
     throw new Error("PRIVATE_KEY environment variable not set");
   }
 
-  const deployer = new Wallet(privateKey, ethers.provider);
+  // Get provider from Hardhat network
+  const provider = (ethers as any).provider || hre.network.provider;
+  const deployer = new Wallet(privateKey, provider);
   const owner = await deployer.getAddress();
   const teeServer = await deployer.getAddress();
 
   console.log("Deployer:", owner);
-  console.log("Chain ID:", (await ethers.provider.getNetwork()).chainId);
+  console.log("Chain ID:", (await provider.getNetwork()).chainId);
 
   const contracts = await connectToDeployedContracts(deployer);
   const { accountAddress, initData, salt } = await preComputeAccountAddress(contracts, owner);
 
   console.log("\n[Step 3] Checking if account already deployed...");
-  const existingCode = await ethers.provider.getCode(accountAddress);
+  const existingCode = await provider.getCode(accountAddress);
   if (existingCode !== "0x") {
     console.log("⚠️  Account already deployed at:", accountAddress);
     console.log("Skipping deployment. Use a different salt for a new account.");
@@ -83,8 +86,8 @@ async function main() {
 
   console.log("✓ Account not yet deployed, proceeding with atomic deployment...");
 
-  await mintTokensToAccount(contracts.mockToken, accountAddress);
-  await deployAccountAndExecuteDistribution(contracts, accountAddress, initData, salt, owner, deployer);
+  await mintTokensToAccount(contracts.mockToken, accountAddress, provider);
+  await deployAccountAndExecuteDistribution(contracts, accountAddress, initData, salt, owner, deployer, provider);
   await updateDeploymentsJson(accountAddress);
 
   console.log("\n=== ATOMIC DEPLOYMENT COMPLETE ===");
@@ -161,10 +164,10 @@ async function preComputeAccountAddress(contracts: DeployedContracts, owner: str
   return { accountAddress, initData, salt };
 }
 
-async function mintTokensToAccount(mockToken: any, accountAddress: string) {
+async function mintTokensToAccount(mockToken: any, accountAddress: string, provider: any) {
   console.log("\n[Step 4] Minting tokens to pre-computed address...");
   console.log("Target address:", accountAddress);
-  console.log("Address has code?", (await ethers.provider.getCode(accountAddress)) !== "0x");
+  console.log("Address has code?", (await provider.getCode(accountAddress)) !== "0x");
 
   const tx = await mockToken.mint(accountAddress, INITIAL_TOKEN_BALANCE);
   await tx.wait();
@@ -180,7 +183,8 @@ async function deployAccountAndExecuteDistribution(
   initData: string,
   salt: string,
   owner: string,
-  deployer: Wallet
+  deployer: Wallet,
+  provider: any
 ) {
   console.log("\n[Step 5] Deploying account and executing distribution in ATOMIC SINGLE TX...");
 
@@ -243,7 +247,7 @@ async function deployAccountAndExecuteDistribution(
   // Generate TEE attestation signature
   const nonce = Math.floor(Date.now() / 1000);
   const allowedPercentageBps = TOTAL_PERCENTAGE;
-  const chainId = (await ethers.provider.getNetwork()).chainId;
+  const chainId = (await provider.getNetwork()).chainId;
 
   const attestationHash = solidityPackedKeccak256(
     ["uint256", "address", "address", "uint256", "uint256", "bytes"],
@@ -293,11 +297,15 @@ async function deployAccountAndExecuteDistribution(
   const tx = await multicall3.aggregate3(calls, { gasLimit: 5000000 });
   const receipt = await tx.wait();
 
+  if (!receipt) {
+    throw new Error("Transaction receipt is null");
+  }
+
   console.log("✓ Transaction hash:", receipt.hash);
   console.log("✓ Gas used:", receipt.gasUsed.toString());
 
   // Verify account deployment
-  const deployedCode = await ethers.provider.getCode(accountAddress);
+  const deployedCode = await provider.getCode(accountAddress);
   if (deployedCode === "0x") {
     throw new Error("Account deployment failed - no code at address");
   }

@@ -13,10 +13,14 @@ npm install
 ```
 
 2. Set up environment variables:
-   - Copy `.env.example` to `.env` (if it exists) or create a `.env` file
+   - Create a `.env` file in the project root
    - Add your private key:
    ```
    PRIVATE_KEY=your_private_key_here
+   ```
+   - Optionally add a custom RPC URL:
+   ```
+   RPC_URL=https://sepolia.base.org
    ```
 
 ## Running the Script
