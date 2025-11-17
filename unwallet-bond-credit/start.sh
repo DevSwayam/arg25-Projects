@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# Navigate to project directory if it exists
+if [ -d "unwallet-bond-credit" ]; then
+  cd unwallet-bond-credit
+fi
+
 # Install Bun if not already installed
 if ! command -v bun &> /dev/null; then
   echo "Installing Bun..."

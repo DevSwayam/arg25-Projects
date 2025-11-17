@@ -5,9 +5,10 @@ nixPkgs = ["nodejs-18_x", "curl"]
 cmds = [
   "curl -fsSL https://bun.sh/install | bash",
   "export PATH=\"$HOME/.bun/bin:$PATH\"",
+  "cd unwallet-bond-credit 2>/dev/null || true",
   "bun install"
 ]
 
 [start]
-cmd = "bash start.sh"
+cmd = "export PATH=\"$HOME/.bun/bin:$PATH\" && cd unwallet-bond-credit 2>/dev/null || true && bun run poll-server.ts"
 

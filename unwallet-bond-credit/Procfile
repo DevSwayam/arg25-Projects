@@ -1,0 +1,2 @@
+web: export PATH="$HOME/.bun/bin:$PATH" && cd unwallet-bond-credit 2>/dev/null || true && bun run poll-server.ts
+
