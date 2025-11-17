@@ -6,7 +6,9 @@
   "scripts": {
     "deploy": "NETWORK=baseSepolia ts-node --require dotenv/config index.ts",
     "compile": "hardhat compile",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "poll": "bun run poll-server.ts",
+    "start": "bun run poll-server.ts"
   },
   "keywords": [
     "hardhat",
