@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { createWalletClient, createPublicClient, http, encodeAbiParameters, encodePacked, keccak256, toHex, Hex } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import { baseSepolia, arbitrumSepolia } from 'viem/chains';

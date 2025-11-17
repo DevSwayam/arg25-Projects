@@ -8,7 +8,7 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "build": "npm install",
-    "start": "ts-node --require dotenv/config index.ts"
+    "start": "ts-node index.ts"
   },
   "keywords": [
     "hardhat",
