@@ -7,9 +7,8 @@
     "deploy": "NETWORK=baseSepolia ts-node --require dotenv/config index.ts",
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "poll": "bun run poll-server.ts",
-    "build": "bun install",
-    "start": "bun run poll-server.ts"
+    "build": "npm install",
+    "start": "ts-node --require dotenv/config poll-server.ts"
   },
   "keywords": [
     "hardhat",

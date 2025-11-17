@@ -1,11 +1,10 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "curl -fsSL https://bun.sh/install | bash && export PATH=\"$HOME/.bun/bin:$PATH\" && cd unwallet-bond-credit 2>/dev/null || true && bun install"
+    "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "export PATH=\"$HOME/.bun/bin:$PATH\" && cd unwallet-bond-credit 2>/dev/null || true && bun run poll-server.ts",
+    "startCommand": "npm start",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
