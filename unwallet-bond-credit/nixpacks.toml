@@ -8,5 +8,5 @@ cmds = [
 ]
 
 [start]
-cmd = "cd unwallet-bond-credit 2>/dev/null || true && npm start"
+cmd = "cd unwallet-bond-credit 2>/dev/null || true && npm run start"
 
