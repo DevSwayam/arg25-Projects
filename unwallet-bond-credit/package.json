@@ -2,10 +2,11 @@
   "name": "unwallet-bond-credit",
   "version": "1.0.0",
   "description": "BondModule Event Polling Server",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "npm install",
-    "start": "ts-node index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node index.ts"
   },
   "keywords": [
     "ethereum",
